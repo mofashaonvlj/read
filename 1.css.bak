@@ -1,0 +1,275 @@
+ *{
+	padding:0px;
+	margin:0px;
+    }
+#container {
+    margin-top:10px;
+	margin-right:0;
+	margin-left:auto;
+   
+    width: 480px;
+    
+    overflow: hidden;
+    
+   
+}
+#leafContainer 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#message
+{
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    height: 300px;
+    background:transparent url('images/textBackground.png') repeat-x center;
+    color: #5C090A;
+    font-size: 220%;
+    font-family: 'Georgia';
+    text-align: center;
+    padding: 20px 10px;
+    -webkit-box-sizing: border-box;
+    -webkit-background-size: 100% 100%;
+    z-index: 1;
+}
+p {
+  margin: 15px;
+}
+
+a
+{
+  color: #5C090A;
+  text-decoration: none;
+}
+
+
+em 
+{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.phone {
+  font-size: 150%;
+  vertical-align: middle;
+}
+
+
+#leafContainer > div 
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
+
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+}
+
+
+#leafContainer > div > img {
+     position: absolute;
+     width: 100px;
+     height: 100px;
+
+    
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+     -webkit-animation-timing-function: ease-in-out;
+     -webkit-transform-origin: 50% -100%;
+}
+
+
+@-webkit-keyframes fade
+{
+  
+    0%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+@-webkit-keyframes drop
+{
+  0%   { -webkit-transform: translate(0px, -50px); }
+  100% { -webkit-transform: translate(0px, 1100px); }
+}
+
+@-webkit-keyframes clockwiseSpin
+{
+    0%   { -webkit-transform: rotate(-50deg); }
+    100% { -webkit-transform: rotate(50deg); }
+}
+
+
+@-webkit-keyframes counterclockwiseSpinAndFlip 
+{
+    0%   { -webkit-transform: scale(-1, 1) rotate(50deg); }
+    100% { -webkit-transform: scale(-1, 1) rotate(-50deg); }
+}
+
+	#top{
+		width:999;
+		height:300px;
+		text-align:center;
+	}
+	#top-first {
+	   width:100%;
+		height:25px;
+		border-top:4px solid #669900;
+		background:#eee;
+		letter-spacing:6px;
+	}
+	#top-first a{
+		text-decoration:none;
+		color:black;
+		font-size:12px;
+		margin:0 3px;
+		padding:0 5px;
+	}
+	#top-second{
+		width:888px;
+		height:160px;
+		padding-top:8px;
+	    
+		line-height:120px;
+		margin:0 auto;
+	
+	}
+	#top-second .first-img{
+		float:left;
+	}
+	#top-second .second-img{  
+		float:left;
+		height:150px;
+	    padding-top:10px;
+		margin-left:30px;  
+	}
+	#box{
+		width:230px;
+		height:30px;
+		margin-top:45px;
+		border:1px solid black;
+		float:right;
+	}
+	#box .box1{
+		width:30px;
+		float:left;
+	}
+	#box .box2{
+		border:none;
+		height:30px;
+		float:left;
+	}
+	#box .box3{  
+	    width:30px;
+		line-height:30px;	
+		float:right;
+	}
+	#top-three{
+		width: 100%;
+		height:40px;
+        line-height:30px;
+        background:#73b546;
+	}
+	#top-three .menu{
+        width:888px;
+        height: 40px;
+		margin:0 auto;
+		
+		
+	}
+	#top-three .menu li{
+       
+		font-size:16px;
+		color:#fff;
+		list-style: none;
+		float:left;
+		line-height:40px;
+		padding-right:30px;
+		
+	}
+	.menu li a{
+		color:#fff;
+		display:block;
+	    float:left;
+		text-decoration: none;
+		
+		 width:70px;
+	}
+	.menu li a:hover{
+		background-color: #448915;
+	}
+   
+
+	#navi{
+		width:1000px;
+		height:1200px;
+		margin-left:180px;
+		border:2px solid #698b22;
+        background:url(img/14.jpg) repeat;
+
+        background-attachment: fixed;
+	}
+
+
+	#navi .navi-img{
+		float:left;
+		width:350px;
+		height:350px;
+		border-radius:400px;
+		margin-right: 40px;
+		margin-left: 40px;
+		
+	}
+	#navi .navi-img:hover{
+		width:400px;
+		height:400px;
+	}
+	#navi .navi-text{
+        float: left;
+        width:500;
+        height:200px;
+        text-decoration: none;
+        color:#0040ff;
+        line-height: 35px;
+        font-size:17px;
+        font-family:"华文行楷";
+        margin-top: 8px;
+        margin-bottom: 20px;
+		
+	}
+     #navi-b .navi-img{
+		float:right;
+     }
+     #navi-d .navi-img{
+		float:right;
+     }
+	#jiao{
+		text-align: center;
+	}
+	hr{
+		margin-left: 170px;
+		width:999px;
+        margin-top: 40px;
+		border:4px solid #698b22;
+	}
+	#jiao .jiao-a{
+		margin-left: 170px;
+		width: 999px;
+		height: 100px;
+		line-height: 50px;
+		background: #aaaaaa;
+		margin-top: 20px;
+		text-align: center;
+	}
+	#jiao .jiao-b a{
+		text-decoration: none;
+		color:#2255ff;
+		font-size:15px;
+
+	}

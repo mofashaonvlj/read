@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书推荐</title>
+    <style>
+        body {
+            width: 960px;
+            margin: 50px auto 0;
+            font: 13px/1.5 "Helvetica Neue", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        #nav {
+            margin: 30px 0 15px;
+            padding: 5px 10px;
+            color: #555555;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid #fff;
+            float: right;
+
+        }
+        #nav label {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        #nav label:hover {
+            color: #6cbdc4;
+        }
+        #container {
+            width: 960px;
+            float: left;
+           /* border: 1px solid red;*/
+        }
+        #wrapper {
+            width: 958px;
+            /*margin-top: -2px;*/
+            border: 1px solid #dddddd;
+            border-top: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        input {
+            display: none;
+        }
+
+        #slider {
+            width: 3832px;
+            transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        #slide1,#slide2, #slide3, #slide4 {
+            color: #777777;
+            font-size: 160px;
+            text-align: center;
+            line-height: 470px;
+        }
+        .slide {
+            width: 958px;
+            height: 470px;
+            float: left;
+        }
+        #trigger1:checked ~ #wrapper #slider {
+            transform: translateX(0px);
+        }
+
+        #trigger2:checked ~ #wrapper #slider {
+            transform: translateX(-958px);
+        }
+
+        #trigger3:checked ~ #wrapper #slider {
+            transform: translateX(-1916px);
+        }
+
+        #trigger4:checked ~ #wrapper #slider {
+            transform: translateX(-2874px);
+        }
+        .text p{
+           width: 150px;
+           height: 100px;
+           border: 1px solid yellow;
+           font-size: 10px;
+           float: left;
+           margin: 5px;
+           color: #fff;
+        }
+        .class{
+            width: 150px;
+           height: 100px;
+           border: 1px solid yellow;
+        }
+    </style>
+</head>
+<body background="imgs/pagebg.jpg">
+<a href="qn.html" title="返回首页"><b>返回</b></a>
+&nbsp;&nbsp;
+<a href="书屋.html" title="返回书屋"><b>书屋</b></a>
+&nbsp;&nbsp;
+<a href="推荐.html" title="返回书籍推荐"><b>推荐</b></a>
+<nav id="nav">
+    <label for="trigger1">意林</label>
+    <label for="trigger2">读者</label>
+    <label for="trigger3">哲思</label>
+    <label for="trigger4">格言</label>
+  
+</nav>
+<div class="text">
+    <p><b>意林</b>：读一本好书，就是和许多高尚的人对话，而《意林》就是这样一本书！</p>
+    <p><b>读者</b>：懂生活，知感恩，简单而温暖的小故事透露着生活中的思考！</p>
+    <p><b>哲思</b>：发生在青春时期的故事，可以是往事或友情，最好无关爱情和亲情；可以是自己也可是身边人物，也可以是长辈在回忆青春。</p>
+    <p><b>格言</b>：内容主题风格唯美、清雅、幽默、生动。在栏目设计上围绕“明快朴实、大巧似平”的思想，以朴素之美贯穿思想精髓。</p>
+</div>
+<div id="container">
+    <input type="radio" name="trigger" id="trigger1" checked>
+    <input type="radio" name="trigger" id="trigger2">
+    <input type="radio" name="trigger" id="trigger3">
+    <input type="radio" name="trigger" id="trigger4">
+    
+    <div id="wrapper">
+        <div id="slider">
+            <div id="slide1" class="slide">
+            <img src="imgs/021.jpg" width="450" width="450">
+            </div>
+            <div id="slide2" class="slide"><img src="imgs/020.jpg" width="450" width="450"></div>
+            <div id="slide3" class="slide"><img src="imgs/022.jpg" width="450" width="450"></div>
+            <div id="slide4" class="slide"><img src="imgs/024.jpg" width="450" width="450"></div>
+
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>

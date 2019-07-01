@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推荐</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 600px;
+            background-color: #ffe5e5;
+           /* border: 1px solid red;*/
+            height: 1300px;
+        }
+        .box1{
+            width: 400px;
+            height: 400px;
+            /*border: 1px solid red;*/
+            margin:100px auto;
+            position:relative;
+
+        }
+        .box1:hover ul{
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+        #picture{
+            float: left;
+            /*border: 1px solid red;*/
+            width: 260px;
+            height: 360px;
+            margin: 20px 20px 50px 40px;
+            padding: 1px;
+        }
+        #picture img{
+            transform:0.1s transform;
+            transform:translateZ(0);
+            width: 300px;
+            height: 300px;
+            border-radius: 300px;
+        }
+        #picture:hover{
+            z-index: 1;
+        }
+        #picture:hover img{
+            transform:scale(1.5,1.5);
+            transform:0.3s transform;
+        }
+        ul{
+            width: 400px;
+            height: 400px;
+
+            transform: rotateX(-30deg) rotateY(0deg) ;
+            transform-style: preserve-3d;
+            transition: all 10s linear;
+        }
+        li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #fff;
+            
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom:0;
+            top: 0;;
+
+        }
+        ul :nth-child(1){
+            transform:rotateY(0deg) translateZ(100px);
+        }
+        ul :nth-child(2){
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        ul :nth-child(3) {
+            transform: rotateY(-180deg) translateZ(100px);
+        }
+        ul :nth-child(4){
+            transform: rotateY(-270deg) translateZ(100px);
+        }
+        ul :nth-child(5){
+            transform: rotatex(90deg) translateZ(100px);
+        }
+        ul :nth-child(6){
+            transform: rotatex(90deg) translateZ(-100px);
+        }
+        
+        .link{
+            width: 200px;
+            height:40px;
+            line-height: 40px;
+            text-align: center;
+
+        }
+        .link a{
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .link a:hover{
+            color: #a9a9a9;
+        }
+    </style>
+</head>
+<body>
+<div class="link">
+<a href="qn.html">返回</a>
+<a href="书屋.html">书屋</a>
+<a href="more.html">更多</a>
+<a href="书评.html">书评</a>
+</div>
+<div class="box1">
+
+    <ul>
+        <li><img src="imgs/013.jpg" width="200px" height="200px"></li>
+        <li><img src="imgs/014.jpg" width="200px" height="200px"></li>
+        <li><img src="imgs/015.jpg" width="200px" height="200px"></li>
+        <li><img src="imgs/016.jpg" width="200px" height="200px"></li>
+        <li><img src="imgs/017.jpg" width="200px" height="200px"></li>
+        <li><img src="imgs/018.jpg" width="200px" height="200px"></li>
+    </ul>
+
+</div>
+ <div class="box2">
+    <div id="picture">
+    <img src="imgs/300.jpg">
+    <p>有一种默契，叫作：我懂！是啊，阿行，你说的我都懂。
+原来，世间并不是只我一人感到如此地孤独。原来，我的纠结，你也曾有过，甚至更深刻。
+</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/301.jpg">
+    <p>
+不是跌宕起伏的故事情节，是结结实实的生活。但凡意识不到自己处于黑暗中或乐意在黑暗中生活的人，都不能活得美。就像一盏在暴风雪中仍然摇曳不灭的蜡烛，人们就在这摇曳不灭晃晃荡荡中感受快乐，这同样活得非常美。</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/302.jpg">
+    <p>就要做个彪悍的女汉子，不矫揉不做作不发嗲不懦弱，怎么骄傲怎么活！其实，每个人心中都住着一个女汉子。</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/303.jpg">
+    <p>超越人生的困境，突破人性中的弱点，苦难是一种财富，危机就是转机，寻找生命的钻石，参透人生的真谛，心态决定人生的高度，放下就是快乐，天下事为之则易，快乐其实很简单，再苦也要笑一笑。</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/304.jpg">
+    <p>优雅是件很难的事情，优雅要气质、要资历、要岁月沉淀。没有人能替你面对伤痛，也没有人替你扛过挫折，更不会有人替你主宰生活.</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/305.jpg">
+    <p>《生命的奖赏从来不在起点》《没有计划的人一定被计划掉》《别上了固执的当》等等篇篇都很精彩，给人以启迪，你会感觉自己的心灵不断被敲击，你终会相信努力的意义，因为将来的那个你，一定会感谢现在拼命努力的自己！</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/306.jpg">
+    <p>晚清的季候，充满了变法的酵素，林孝恂也深谙“变”的真谛，笑对人生。时代的大变革，天崩地裂，对林孝恂来说，不是绝境，他总能从裂了缝的大地中，找到另一份生机、另一片天地。</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/307.jpg">
+    <p>从孤独、成长、梦想、感情等多个方面来解读生活，让迷茫、困惑，在喧嚣生活中迷失的你找到你自己。功利的世界让我们失去了对生活的热爱和享受，失去了对美好事物的好奇与感知。放慢脚步，和自己的心灵对话，把生活过成你想要的样子。</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/308.jpg">
+    <p>我们总以为播种就会有收获，投入就会有产出，爱了就会得到爱，努力就会有成果。 只知棋分黑白，却不知世事并不如棋。只知好人坏人，却不知世人多为生意人。</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/309.jpg">
+    <p>有多少人在异地漂泊，忍受着寂寞与孤独，下雨没人送伞，吃饭没有人陪，没人分享喜悦，难过只能一个人哭……人生就是这样，耐得住寂寞才撑得起繁华；该奋斗的年龄，不要葬在了安逸，相信自己，终将破茧成蝶！</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/310.jpg">
+    <p>我们告别亲人，离开家乡，怀揣梦想，来到陌生城市，立志要找到自己的地方。理想很丰满，现实却很残酷。大厦林立，人情冷暖，灯火辉煌，世态炎凉，生活的艰辛……正所谓：你不勇敢，没人替你坚强。</p>
+   </div>
+   <div id="picture">
+    <img src="imgs/311.jpg">
+    <p>汇集了卡耐基的思想精华和最激动人心的内容，是作者最成功的励志经典，出版后立即获得了广大读者的欢迎，成为西方世界最持久的人文畅销书。主要内容包括：与人相处的基本技巧、平安快乐的要诀、如何使人喜欢你、如何赢得他人的赞同、如何更好地说服他人、让你的家庭生活幸福快乐等十篇。</p>
+    
+    </div>
+</div>
+
+</body>
+</html>

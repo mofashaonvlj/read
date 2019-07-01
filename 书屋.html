@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>书屋</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+    body{
+    	background-repeat:no-repeat;
+    	background-size: 1400px 1100px;
+    }
+    *{
+    	margin: 0;
+    	padding:0;
+    }
+    #all
+		{
+			width: 680px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#page-flip
+		{
+			padding: 40px 40px 40px 340px;
+		}
+		#r1
+		{
+			position: absolute;
+			z-index: 2;
+			-webkit-transform-origin: 1315px 500px;
+			-webkit-transform: translate(-1030px, -500px) rotate(-32deg);
+			-webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+			-webkit-transition-duration: 1s;
+		}
+		#p1
+		{
+			width: 1285px;
+			height: 1388px;
+			overflow: hidden;
+		}
+ 
+		#p1 > div
+		{
+			-webkit-transform-origin: 285px 0;
+			-webkit-transform: translate(1030px, 500px) rotate(32deg);
+			-webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+			-webkit-transition-duration: 1s;
+			width: 285px;
+			height: 388px;
+			background-image: url(imgs/page1.jpg);
+		}
+		#p1 > div > div
+		{
+			width: 10px;
+			height: 388px;
+			background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .25)), to(rgba(0,0,0,0)));
+		}
+ 
+		#p2 > div
+		{
+			width: 285px;
+			height: 388px;
+			-webkit-box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+			position: absolute;
+			z-index: 1;
+			background-image: url(imgs/page2.jpg);
+		}
+		#r3
+		{
+			-webkit-transform-origin: 1315px 500px;
+			-webkit-transform: translate(-1030px, -500px) rotate(-32deg);
+			-webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+			-webkit-transition-duration: 1s;
+			position: absolute;
+			z-index: 2;
+		}
+ 
+		#s3
+		{
+			-webkit-transform-origin: 70px 500px;
+			-webkit-transform: translate(215px, -500px) rotate(-32deg) translate(40px, 0);
+			-webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+			-webkit-transition-duration: 1s;
+			position: absolute;
+			z-index: 1;
+		}
+		#page-flip:hover #s3
+		{
+			-webkit-transform-origin: 325px 500px;
+			-webkit-transform: translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+		}
+		#sp3
+		{
+			width: 25px;
+			height: 1000px;
+			background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .25)), to(rgba(0,0,0,0)));
+			-webkit-transition-property: width;
+			-webkit-transition-duration: 1s;
+			overflow: hidden;
+		}
+		#page-flip:hover #sp3
+		{
+			width: 11px;
+		}
+		.s
+		{
+			width: 285px;
+			height: 388px;
+			position: absolute;
+			overflow: hidden;
+			z-index: 3;
+		}
+		#s2
+		{
+			-webkit-transform-origin: 45px 500px;
+			-webkit-transform: translate(240px, -500px) rotate(-32deg);
+			-webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+			-webkit-transition-duration: 1s;
+			position: absolute;
+		}
+		#sp2
+		{
+			width: 15px;
+			height: 1000px;
+			background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, .18)), to(rgba(0,0,0,0)));
+			overflow: hidden;
+		}
+		#s4
+		{
+			opacity: 1;
+			-webkit-transition-duration: 0.5s;
+		}
+		#page-flip:hover #s4
+		{
+			opacity: 0;
+		}
+		#page-flip:hover #s2
+		{
+			-webkit-transform-origin: 300px 500px;
+			-webkit-transform: translate(-15px, -500px) rotate(0deg);
+		}
+		#p3
+		{
+			width: 1285px;
+			height: 1388px;
+			overflow: hidden;
+		}
+		#p3 > div
+		{
+			-webkit-transform-origin: 0 0;
+			-webkit-transform: translate(1255px, 500px) rotate(-32deg);
+			-webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+			-webkit-transition-duration: 1s;
+			-webkit-box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+			width: 285px;
+			height: 388px;
+			background-image: url(imgs/page3.jpg);
+			overflow: hidden;
+		}
+		#p3 > div > div
+		{
+			width: 9px;
+			height: 500px;
+			float: right;
+			background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0,0,0,.20)));
+		}
+		
+		#page-flip:hover #r1
+		{
+			-webkit-transform-origin: 1570px 500px;
+			-webkit-transform: translate(-1285px, -500px) rotate(0deg);
+		}
+		#page-flip:hover #p1 > div
+		{
+			-webkit-transform-origin: 285px 0;
+			-webkit-transform: translate(1285px, 500px) rotate(0deg);
+		}
+		#page-flip:hover #r3
+		{
+			-webkit-transform-origin: 1570px 500px;
+			-webkit-transform: translate(-1285px, -500px) rotate(0deg);
+		}
+		#page-flip:hover #p3 > div
+		{
+			-webkit-transform-origin: 0 0;
+			-webkit-transform: translate(1000px, 500px) rotate(0deg);
+		}
+		a
+		{
+			display: block;
+			position: absolute;
+			margin: -20000px 0 0 0;
+			padding: 1px;
+			z-index: 3;
+			-webkit-transition-property: margin;
+			-webkit-transition-duration: 0.05s;
+		}
+		#coke
+		{
+			width: 253px;
+			height: 158px;
+		}
+		a:hover
+		{
+			padding: 0;
+			border: 1px dotted #92C7C1;
+		}
+		#page-flip:hover #coke
+		{
+			-webkit-transition-delay: .8s;
+			margin: 33px 0 0 14px;
+		}
+		#meninas
+		{
+			width: 253px;
+			height: 167px;
+		}
+		#page-flip:hover #meninas
+		{
+			-webkit-transition-delay: .8s;
+			margin: 203px 0 0 14px;
+		}
+		.box1{
+			/*border:1px solid red;*/
+			height: 500px;
+		}
+		.box2{
+			/*border:1px solid red;*/
+			height: 1300px;
+		}
+		#picture{
+			float: left;
+			/*border: 1px solid red;*/
+			width: 260px;
+			height: 360px;
+			margin: 20px 20px 50px 40px;
+			padding: 1px;
+		}
+		#picture img{
+			transform:0.1s transform;
+			transform:translateZ(0);
+		}
+		#picture:hover{
+			z-index: 1;
+		}
+		#picture:hover img{
+			transform:scale(1.5,1.5);
+			transform:0.3s transform;
+		}
+		
+	</style>
+</head>
+<body background="imgs/6.jpg">
+
+<div class="box1">
+    <div style="text-align:center;clear:both;">
+    <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+    <script src="/follow.js" type="text/javascript">
+    </script>
+    </div>
+	<div id="all">
+		<div id="page-flip">
+			<div id="r1">
+			   <div id="p1">
+			     <div>
+			     <div></div>
+			     </div>
+			   </div>
+			</div>
+			<div id="p2">
+			  <div></div>
+			</div>
+			<div id="r3">
+			   <div id="p3">
+			     <div>
+			       <div></div>
+			     </div>
+			   </div>
+			 </div>
+			<div class="s">
+			  <div id="s3">
+			    <div id="sp3"></div>
+			  </div>
+			</div>
+			<div class="s" id="s4">
+			  <div id="s2">
+			     <div id="sp2"></div>
+			  </div>
+			</div>
+			<a id="coke" href="#" title="Pure CSS Coke Can"></a>
+			<a id="meninas" href="#" title="CSS 3D Meninas"></a>
+		</div>
+	</div>
+</div>
+<div class="box2">
+   <div id="picture">
+	<img src="imgs/001.jpg">
+	<p>作者余华成名之作，这本书是对生命的问候，暗示一些现实的问题，其时生命存在的意义，读完全书你会觉得感叹生命的渺小！</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/002.jpg">
+	<p>人生很短，做一个有趣的人，做一个懂生活的人，才是幸福的人。只有在乎平凡生活的人，发现美好的人。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/003.jpg">
+	<p>城里的每一个怀揣着一颗拥有化腐朽为神奇力量的仁爱之心的人都有可能拥有超能力的人。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/004.jpg">
+	<p>全书对于人性的拷问，给了足够的心灵冲击，故事残忍而美丽，内心的善与恶一触即发。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/005.jpg">
+	<p>简单浪漫的名字里面却有着并非轻松易懂的童话故事。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/006.jpg">
+	<p>超出了一般的爱情故描写的俗套,而更为深刻的人生意义。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/007.jpg">
+	<p>连续4年上榜，又一次成为2017亚马孙最畅销的书籍。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/008.jpg">
+	<p>从他们出发的那一刻起，这是生命的回溯，回归内心的冒险就正式宣告开启，一场关于生命的告别仪式，一段自我发现的冒险之旅。人生不会重来，但是生命可以重新发光！</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/009.jpg">
+	<p>生命是一种累，怎么乱七八糟的，但是生命的意义就是在此。经历过的也许是一种痛苦，但是没有经历，抹去所有的过去和回忆，过去就成为空白。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/010.jpg">
+	<p>带你认识26位常常在我们大脑发声的伙伴，他们不断地组织我们做自己，阻止我们实现梦想。而只有学习如何分辨什么是你内心唯一真实的声音，才能掌握幸福的自己的人生！</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/011.jpg">
+	<p>极其启发性和励志意义的故事，人只有勇敢地去实现梦想，梦想才能成真。</p>
+   </div>
+   <div id="picture">
+	<img src="imgs/012.jpg">
+	<p>写给全世界所有真正爱书的人，感动全世界千万读者的阳光治愈小说。
+	</p>
+   </div>
+</div>
+</body>
+</html>

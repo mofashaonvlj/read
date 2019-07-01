@@ -1,0 +1,132 @@
+
+      #tools:before{
+      	background-position: left top; 
+      }
+      #learn:before{
+      	background-position:right top; 
+      }
+      #colock:before{
+      	background-position: -45px top;
+      }
+      #titleName:before{
+        background-position:-90px bottom; 
+      }
+      #bio{
+      	position: relative;
+            /*border:1px solid red;*/
+      }
+      #bio #avatar{
+      float: left;
+      margin: 0 20px 0 0;	
+      }
+      
+      #titleName{
+            font-style: italic;
+            font-family: "华文隶书";
+            font-size: 40px;
+      }
+      a{
+            font-size:25px;
+            text-decoration: none;
+            font-family: "华文隶书";
+            color:black;
+            margin-left:1000px;
+            margin-bottom:100px;
+
+      }
+      #bio h2{
+      	font-size: 2em;
+            /*border:1px solid blue;*/
+            color: #9900ff;
+            font-family: "华文彩云";
+
+      }
+      #bio p{
+      	clear: left;
+      	margin: 40px auto;
+      	padding: 40px 45px;
+      	max-width: 560px;
+      	background: #fbfbfb;
+      	border:1px solid black;
+      	border-radius: 8px;
+      	position: relative;
+      	border-width: 0 1px 1px;
+      	line-height: 1.6em;
+      	font-weight: bold;
+            color: #000066;
+            font-family: "华文隶书";
+            font-size: 20px;
+            background:linear-gradient(to right,#ccffff,#ccccff);
+      }
+      #bio p strong{
+            color: red;
+            font-size: 30px;
+      }
+      #skills .details img{
+      float: left;
+      /*border: 1px solid black;*/
+      border-radius: 25px;
+
+     }
+     #skills .details .tu{
+      margin-left:100px;
+     }
+     #skills .details .text{
+      height: 315px;
+      width: 559px;
+      float: left;
+
+      /*border: 1px solid black;*/
+      border-radius: 25px;
+     }
+      #skills .details .text p{
+            float: left;
+      }
+      #skills .details .text img{
+            float: right;
+      }
+      .section{
+            width: 1024px;
+            height:800px;
+           /* border: 1px solid red;*/
+      }
+       #colock #jobs .details{
+            width: 957px;
+            height: 300px;
+       }
+
+     #colock #jobs .details p{
+      text-align: left;
+      font-size: 20px;
+      width: 757px;
+     }
+      #skills .details,#jobs .details{
+      	float: left;
+      	margin-bottom: 25px;
+            /*border: 1px solid red;*/
+
+      }
+      #skills p{
+      	float: right;
+      	width: 57%;
+      	margin-bottom: 25px;
+      }
+      
+      #tools,#colock{
+            float: left;
+            font-family: "华文隶书";
+            font-size: 30px;
+            font-style: italic;
+           /*border: 1px solid red;*/
+            width: 160px;
+            height: 50px;
+            background-color: #ffcccc;
+      }
+      #skills .details{
+            text-align: left;
+
+      }
+      #jobs .details{
+            background-color: #ccffcc;
+            border-radius: 20px;
+      }
